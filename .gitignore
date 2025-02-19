@@ -1,0 +1,5 @@
+.vs/
+bin/
+obj/
+MyAzureApp.Api/bin/
+MyAzureApp.Api/obj/
