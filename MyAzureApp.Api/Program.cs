@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using MyAzureApp.Application.Services.interfaces;
+using MyAzureApp.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,8 @@ builder.Services.AddSwaggerGen();
 
 // Registrer tjenester fra Application-laget
 builder.Services.AddScoped<IExampleService, ExampleService>();
+builder.Services.AddDbContext<MyDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
