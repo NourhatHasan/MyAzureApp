@@ -12,7 +12,7 @@ using MyAzureApp.Infrastructure.Data;
 namespace MyAzureApp.Infrastructure.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20250220065020_InitialCreate")]
+    [Migration("20250220072026_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
